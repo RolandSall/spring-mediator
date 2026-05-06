@@ -66,9 +66,9 @@ configure(subprojects.filter { it.name in publishableProjects }) {
             }
             developers {
                 developer {
-                    id.set("springmediator")
-                    name.set("Spring Mediator contributors")
-                    url.set("https://github.com/springmediator/spring-mediator")
+                    id.set("rolandsall")
+                    name.set("Roland Sall")
+                    url.set("https://github.com/RolandSall")
                 }
             }
             scm {
