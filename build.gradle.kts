@@ -57,7 +57,7 @@ configure(subprojects.filter { it.name in publishableProjects }) {
         pom {
             name.set(project.name)
             description.set("Spring Mediator — for Spring Boot — CQRS, events with compensation, event sourcing/auditing, pipeline behaviors.")
-            url.set("https://github.com/springmediator/spring-mediator")
+            url.set("https://github.com/RolandSall/spring-mediator")
             licenses {
                 license {
                     name.set("Apache-2.0")
@@ -72,9 +72,9 @@ configure(subprojects.filter { it.name in publishableProjects }) {
                 }
             }
             scm {
-                connection.set("scm:git:https://github.com/springmediator/spring-mediator.git")
-                developerConnection.set("scm:git:ssh://git@github.com/springmediator/spring-mediator.git")
-                url.set("https://github.com/springmediator/spring-mediator")
+                connection.set("scm:git:https://github.com/RolandSall/spring-mediator.git")
+                developerConnection.set("scm:git:ssh://git@github.com/RolandSall/spring-mediator.git")
+                url.set("https://github.com/RolandSall/spring-mediator")
             }
         }
     }
