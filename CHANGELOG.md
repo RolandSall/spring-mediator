@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/RolandSall/spring-mediator/compare/v1.0.3...v1.0.4) (2026-05-06)
+
+
+### Documentation
+
+* harden .gitignore for secrets + write PUBLISHING.md gotcha note ([ead58e2](https://github.com/RolandSall/spring-mediator/commit/ead58e2589ce2e9f8c157d312e9aa97fd138935f))
+
 ## [1.0.3](https://github.com/RolandSall/spring-mediator/compare/v1.0.2...v1.0.3) (2026-05-06)
 
 
