@@ -1,0 +1,6 @@
+io.github.springmediator.mediator.autoconfigure.MediatorAutoConfiguration
+io.github.springmediator.mediator.autoconfigure.MediatorBehaviorAutoConfiguration
+io.github.springmediator.mediator.autoconfigure.MediatorEventStoreAutoConfiguration
+io.github.springmediator.mediator.autoconfigure.MediatorEventStoreJpaAutoConfiguration
+io.github.springmediator.mediator.autoconfigure.MediatorEventStoreJdbcAutoConfiguration
+io.github.springmediator.mediator.autoconfigure.MediatorFlowAutoConfiguration

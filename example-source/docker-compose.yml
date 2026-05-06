@@ -1,0 +1,20 @@
+services:
+  spring-mediator-source-db:
+    image: postgres:16-alpine
+    container_name: spring-mediator-source-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: source_example
+    ports:
+      - "5436:5432"
+    volumes:
+      - source_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  source_pgdata:

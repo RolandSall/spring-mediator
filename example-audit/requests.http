@@ -1,0 +1,51 @@
+### Health check
+GET http://localhost:8081/
+
+### Create an order
+POST http://localhost:8081/orders
+Content-Type: application/json
+
+{
+  "customerId": "customer-123",
+  "items": [
+    {
+      "productId": "prod-001",
+      "name": "Widget",
+      "quantity": 2,
+      "price": 29.99
+    },
+    {
+      "productId": "prod-002",
+      "name": "Gadget",
+      "quantity": 1,
+      "price": 49.99
+    }
+  ],
+  "total": 109.97
+}
+
+### Get all orders
+GET http://localhost:8081/orders
+
+### Get order by ID (replace with actual ID)
+GET http://localhost:8081/orders/{{orderId}}
+
+### Cancel order (replace with actual ID)
+POST http://localhost:8081/orders/{{orderId}}/cancel
+Content-Type: application/json
+
+{
+  "reason": "Customer changed their mind"
+}
+
+### View audit events
+GET http://localhost:8081/internals/audit
+
+### View registered handlers
+GET http://localhost:8081/internals/events
+
+### View status
+GET http://localhost:8081/internals/status
+
+### Clear query cache
+POST http://localhost:8081/internals/cache/clear

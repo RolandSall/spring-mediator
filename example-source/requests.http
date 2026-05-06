@@ -1,0 +1,38 @@
+### Health check
+GET http://localhost:8082/
+
+### Open a new bank account
+POST http://localhost:8082/accounts
+Content-Type: application/json
+
+{
+  "ownerName": "John Doe",
+  "initialDeposit": 1000.00
+}
+
+### Deposit money (replace with actual ID)
+POST http://localhost:8082/accounts/{{accountId}}/deposit
+Content-Type: application/json
+
+{
+  "amount": 500.00
+}
+
+### Withdraw money (replace with actual ID)
+POST http://localhost:8082/accounts/{{accountId}}/withdraw
+Content-Type: application/json
+
+{
+  "amount": 200.00
+}
+
+### Get account (replace with actual ID) — state rebuilt from events
+GET http://localhost:8082/accounts/{{accountId}}
+
+### Close account (replace with actual ID)
+POST http://localhost:8082/accounts/{{accountId}}/close
+Content-Type: application/json
+
+{
+  "reason": "Customer request"
+}

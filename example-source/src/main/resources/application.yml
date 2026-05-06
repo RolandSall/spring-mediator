@@ -1,0 +1,30 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5436/source_example
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+mediator:
+  behaviors:
+    logging-enabled: true
+    validation-enabled: true
+    exception-handling-enabled: true
+    performance-tracking-enabled: true
+    performance-threshold-ms: 100
+
+  event-store:
+    enabled: true
+    mode: source
+    table-name: domain_events
+    use-existing-datasource: true
+    auto-create-schema: true
+
+  flow:
+    enabled: false
+    collector-url: http://localhost:4800
+    service-name: example-source
+    include-payloads: true
