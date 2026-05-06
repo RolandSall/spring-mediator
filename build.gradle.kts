@@ -89,7 +89,7 @@ configure(subprojects.filter { it.name in publishableProjects }) {
         repositories {
             maven {
                 name = "github"
-                url = uri("https://maven.pkg.github.com/springmediator/spring-mediator")
+                url = uri("https://maven.pkg.github.com/rolandsall/spring-mediator")
                 credentials {
                     username = System.getenv("GITHUB_ACTOR")
                     password = System.getenv("GITHUB_TOKEN")
