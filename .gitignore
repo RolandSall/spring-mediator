@@ -28,3 +28,33 @@ hs_err_pid*
 
 # Logs
 *.log
+
+*.asc
+*.gpg
+*.pgp
+secring.*
+pubring.*
+gpg-key*
+signing-key*
+private-key*
+
+.env
+.env.*
+!.env.example
+credentials
+credentials.*
+secrets
+secrets.*
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa*
+id_ed25519*
+
+gradle.properties.local
+~/.gradle/gradle.properties
+.m2/settings.xml
