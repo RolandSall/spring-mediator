@@ -42,10 +42,14 @@ jobs:
       # 2) GitHub Packages — separate step so a GHP-side hiccup doesn't roll
       #    back the Central Portal release. continue-on-error keeps the job
       #    green when GHP itself burps; Maven Central is the source of truth.
+      #    Signing creds are passed here too because Gradle's task graph
+      #    rebuild includes signMavenPublication even for non-central targets.
       - name: Publish to GitHub Packages
         if: always()
         continue-on-error: true
         env:
+          ORG_GRADLE_PROJECT_signingInMemoryKey:          ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword:  ${{ secrets.SIGNING_PASSWORD }}
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
