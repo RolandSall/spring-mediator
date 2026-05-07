@@ -13,7 +13,6 @@ java {
 }
 
 repositories {
-    mavenLocal()        // resolves the locally-published spring-mediator artifacts
     mavenCentral()
 }
 
@@ -24,8 +23,8 @@ dependencyManagement {
 }
 
 dependencies {
-    // The library, consumed exactly as a downstream user would.
-    implementation("io.github.springmediator:spring-mediator-starter:1.0.0-SNAPSHOT")
+    // The library, consumed from Maven Central — exactly as a downstream user would.
+    implementation("io.github.springmediator:spring-mediator-starter:1.0.3")
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
